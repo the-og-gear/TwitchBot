@@ -1,0 +1,24 @@
+{
+  "name": "twitchbot",
+  "version": "0.0.2",
+  "description": "A Twitch bot for Gear's chat",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-og-gear/twitch-bot.git"
+  },
+  "author": "Gear",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/the-og-gear/twitch-bot/issues"
+  },
+  "homepage": "https://github.com/the-og-gear/twitch-bot#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "tmi.js": "^1.5.0"
+  }
+}

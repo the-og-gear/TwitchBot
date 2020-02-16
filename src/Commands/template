@@ -1,0 +1,7 @@
+module.exports = {
+	name: "command name",
+	description: "command description",
+	async run(client, target, context) {
+		// Command code
+	}
+}
