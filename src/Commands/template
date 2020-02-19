@@ -1,7 +1,8 @@
 module.exports = {
 	name: "command name",
 	description: "command description",
-	async run(client, target, context) {
+	cooldown: 0, // Cooldown in ms
+	async run(client, target, context, cooldown) {
 		// Command code
 	}
 }
