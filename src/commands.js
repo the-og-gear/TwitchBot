@@ -2,10 +2,12 @@ function createCommandList() {
 	const path = require('path');
 	const fs = require('fs');
 	let tmp = new Map();
-	let files = fs.readdirSync(path.join(__dirname, 'Commands')).filter(file=>file.endsWith('.js'));
+	let p = path.join(__dirname, 'Commands');
+	let files = fs.readdirSync(p.filter(file=>file.endsWith('.js')));
 
 	for (let f of files) {
-		let c = require(path.join(__dirname, 'Commands', f));
+		let c = require(path.join(p, f));
+		c.path = path.join(p, f);
 		tmp.set(c.name, c);
 	}
 
