@@ -2,3 +2,4 @@
 .env
 token.json
 package-lock.json
+.tags
