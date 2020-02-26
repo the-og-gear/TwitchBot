@@ -5,7 +5,7 @@ require('dotenv').config();
 
 // Client options
 const options = {
-	options: { debug: false },
+	options: { debug: process.env.NODE_ENV==="production" ? false : true },
 	connection: {
 		secure: true,
 		reconnect: true
