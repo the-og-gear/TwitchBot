@@ -12,13 +12,15 @@ function createCommandList() {
 	return tmp;
 }
 
-async function handle(client, command, target, context) {
+async function handle(client, command, target, userinfo) {
 	const fs = require('fs');
 	const path = require('path');
 	if (!command.startsWith('!')) { return; }
 
+	let c = command.split(' ');
+
 	try {
-		client.command_list.get(command.split(' ')[0].substring(1)).run(client, target, context);
+		client.command_list.get(c[0].substring(1)).run(client, target, userinfo, c.slice(1));
 	} catch(e) {
 		console.log(`Error in command ${command}! Trace:\n${e}`);
 	}
